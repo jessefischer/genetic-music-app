@@ -108,7 +108,7 @@ Woodshed.prototype.toggle = function() {
 
 Woodshed.prototype.start = function() {
 	if ( !this.loop ) {
-		Tone.context.resume();
+		Tone.start();
 		this.loop = new Tone.Loop( this.step.bind( this ), '8n' ).start( 0 );
 	}
 	this.playing = true;
