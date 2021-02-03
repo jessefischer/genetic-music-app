@@ -17,6 +17,11 @@ $( function() {
 
 	// TODO: add arrow key support for modifying sequence
 
+	// From https://github.com/Tonejs/Tone.js#starting-audio
+	document.querySelector('#div#play-button')?.addEventListener('click', async () => {
+		await Tone.start();
+		console.log('audio is ready');
+	})
 
 	// Set up mouse actions on Play/Stop button
 	playButton.mousedown( function( e ) {
